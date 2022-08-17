@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@600&display=swap');
+.iconoMenu{
+    color: white;
+    font-size: 35px;
+    font-family: 'Cabin', sans-serif;
+}
+/*OPCI0NES DEL MENU (TURNOS,DONAR,REGISTRATE) LE ESTOY DANDO UN HOVER AL PASAR EL MOUSE*/
+.opcionesDelMenu:hover{
+    color: blue;
+    font-family: 'Cabin', sans-serif;
+}

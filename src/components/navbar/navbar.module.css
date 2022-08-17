@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap");
+.nav {
+  box-shadow: none;
+  font-family: 'Cabin', sans-serif;
+}
+
+.titulo {
+  font-family: 'Cabin', sans-serif;
+  font-size: 20px;
+  color: white;
+}
+.icon {
+  font-size: 40px;
+ 
+  /*DISITNTO BODU*/
+  color: white;
+}
+
+
+/*BOTONES DE DISPLAY XL*/
+.boton{
+display: flex;
+text-align: center;
+justify-content: center;
+align-items: center;
+margin: 20px;
+background-color: transparent;
+height: 30px;
+width: 100px;
+color: white;
+border: none;
+cursor: pointer;
+transition: ease-in-out 0.3s;
+position: relative;
+
+}
+.boton::before{
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  background: rgb(255, 255, 255);
+  transform: scaleX(0);
+  transform-origin:right;
+  width: 100%;
+  transition: transform .4s ease-in-out;
+
+
+}
+.boton:hover:before{
+ transform: scaleX(1);
+ transform-origin:left;
+}

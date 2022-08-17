@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@600;700&display=swap');
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color:rgb(249, 249, 252);
+  color: rgb(29, 29, 29);
+  font-family: 'Cabin', sans-serif;
+}
+
+/*SCROLL DE PAGINA WEB*/
+body::-webkit-scrollbar{
+width: 13px;
+}
+body::-webkit-scrollbar-thumb{
+background-color: rgb(88, 58, 223);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Cabin', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}

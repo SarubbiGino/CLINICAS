@@ -1,0 +1,37 @@
+
+.titulo{
+    color: rgb(12, 12, 87);
+    font-size: 50px;
+  
+    
+}
+
+.p{
+    font-size: 18px;
+    
+    font-weight: 500;
+    color: #8b8b8b;
+}
+.Button {
+   border-radius: 10px; 
+   font-weight: 700;
+   height: 50px;
+   width: 250px;
+   background-color: rgb(65, 37, 192);
+   color: rgb(243, 243, 243);
+   transition: .5s ease;
+
+  }
+
+.Button:hover{
+    background-color:rgb(88, 58, 223);
+    transform: translateY(-2px);
+  
+}
+.contieneTitulo{
+    margin-top: 200px;
+    margin-bottom: 140px;
+ 
+
+}
+

@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@600&display=swap');
+/*.Card{
+    margin: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    height: 400px;
+    
+  }*/
+  .carta{
+    border: none;
+    margin: 30px;
+    background-color: transparent;
+    color: rgb(20, 20, 20);
+    transition: ease .1s;
+    cursor: pointer;
+    box-shadow: 0px 0px 3px 0.1px rgba(0, 0, 0, 0.25);
+    text-align: left;
+    font-family: 'Cabin', sans-serif;
+  }
+  .carta:hover{
+    transform: translateY(-2px);
+   
+  }
+ 
+  .boton{
+    background-color:#2d13a3;;
+    font-family: 'Cabin', sans-serif;
+    color: rgb(235, 235, 235);
+    width: 140px;
+    height: 40px;
+    font-weight: 500;
+    border-radius: 0;
+    border: none;
+    transition: all .3s ease-in-out;
+  }
+  .boton:hover{
+    background-color: rgb(99, 73, 216);
+  }
+  .contenedorBoton{
+    justify-content: left;
+    padding-left: 16px;
+  }
