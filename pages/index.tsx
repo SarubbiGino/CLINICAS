@@ -25,7 +25,8 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <TituloMain />
         <h1 className={styles.empiezaDonar}>Empieza a Donar</h1>
-        <Tarjetas />
+        <h4 >¿COMO DONAR SANGRE?</h4>
+        <Tarjetas/>
       </main>
     </Layout>
   );

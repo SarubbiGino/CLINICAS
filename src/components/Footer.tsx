@@ -10,7 +10,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import FacebookIcon from '@mui/icons-material/FacebookTwoTone';
-import YoutubeIcon from '@mui/icons-material/Youtube';
+
 import WhatsappIcon from '@mui/icons-material/WhatsApp';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
@@ -35,7 +35,7 @@ export default function Footer() {
                    <FacebookIcon className={estilos.logos}/>
                    <TwitterIcon className={estilos.logos}/>
                    <LinkedInIcon className={estilos.logos}/>
-                   <YoutubeIcon className={estilos.logos}/>
+                 
                    <WhatsappIcon className={estilos.logos}/> 
                 </Box>
             </Grid>
