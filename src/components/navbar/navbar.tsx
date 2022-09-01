@@ -48,6 +48,7 @@ export default function navbar() {
     initial={{y: -20, opacity: 0}}
     animate ={{y: 0, opacity: 1}}
     transition={{duration: 0.5}}>
+      <div className='header-space'></div>
         <Navbar className={estilos.nav} position = "fixed"  style={{backgroundColor: " #2d13a3"}} >
             <Toolbar color="primary">
             <Typography  className={estilos.titulo} variant="h6" component="div" sx={{ flexGrow: 1 }}  >
