@@ -5,6 +5,7 @@ import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import tarjetasMain from './tarjetasMain';
+import Imagen1 from '../../assets/image1.jpg';
 
 
 
@@ -14,17 +15,19 @@ const cards =  [
         id: 1,
         title: 'DONACION DE PLASMA',
         descripcion: "Lizards are a widespread group of squamate reptiles with over 6000 fas  gb fg g fg g gsd g sihaiohdioa iodhaoid diohadiobauiodhio hfoiafhio ihao",
-       
+        image: Imagen1,
     },
     {
         id: 2,
         title: 'DONACION DE SANGRE',
-        descripcion: "Lizards are a widespread  dwads dsa dsad sadfefadfsad dwddsdwad dsdasdsdasdasdas dsadasddiobauiodhio hfoiafhio ihao"
+        descripcion: "Lizards are a widespread  dwads dsa dsad sadfefadfsad dwddsdwad dsdasdsdasdasdas dsadasddiobauiodhio hfoiafhio ihao",
+      
     },
     {
         id: 1,
         title: 'DONACION DE PLAQUETAS',
-        descripcion: "ygrgef dfwdawdfsaf fafaf  faf asfa  ffawf a aw fwaf awf wafa fas fas  gb fg g fg g gsd g sihaiohdioa iodhaoid diohadiobauiodhio hfoiafhio ihao"
+        descripcion: "ygrgef dfwdawdfsaf fafaf  faf asfa  ffawf a aw fwaf awf wafa fas fas  gb fg g fg g gsd g sihaiohdioa iodhaoid diohadiobauiodhio hfoiafhio ihao",
+      
     }
 ]
 
@@ -35,7 +38,7 @@ export default function tarjetaid() {
         {
             cards.map(tarjetasMain => (
                   <Grid item xs key={tarjetasMain.id}  display="flex" alignItems="center" justifyContent="center" textAlign="center" >
-                     <Carta title={tarjetasMain.title} descripcion={tarjetasMain.descripcion} imageSourse={tarjetasMain.image} />
+                     <Carta title={tarjetasMain.title} descripcion={tarjetasMain.descripcion} iamgen={tarjetasMain.image} />
                   </Grid>
             ))
         }
