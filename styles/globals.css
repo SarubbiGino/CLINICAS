@@ -32,3 +32,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.header-space{
+  height: 57px;
+}
