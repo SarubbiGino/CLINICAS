@@ -30,10 +30,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/form": [
+    "/formDonar/form": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/form.js"
+      "static/chunks/pages/formDonar/form.js"
     ]
   },
   "ampFirstPages": []
