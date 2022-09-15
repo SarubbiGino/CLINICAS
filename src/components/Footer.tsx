@@ -31,12 +31,13 @@ export default function Footer() {
 
             <Grid item xs ={12} sm={4} >
              <Box className={estilos.redes}>Redes Sociales</Box>
-                <Box className={estilos.contenedorRedes} >
+                <Box className={estilos.contenedorRedes}>
                     <a href='https://es-la.facebook.com/amhclinicas/'><FacebookIcon className={estilos.logos}/></a>
                     <a href="https://twitter.com/Prensaclinicas?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><TwitterIcon className={estilos.logos}/></a>
                     <a href='https://ar.linkedin.com/company/hospital-de-cl%C3%ADnicas-jos%C3%A9-de-san-mart%C3%ADn-'><LinkedInIcon className={estilos.logos}/></a>
                     <a href="https://www.instagram.com/hospitaldeclinicasok/?hl=es"> <InstagramIcon className={estilos.logos}/></a>
                     <a href="tel:011 5950-8000"> <LocalPhoneIcon className={estilos.logos}></LocalPhoneIcon></a>
+
                 </Box>
             </Grid>
         </Grid>
