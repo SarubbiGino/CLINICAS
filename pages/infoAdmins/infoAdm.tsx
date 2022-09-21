@@ -3,7 +3,9 @@ import useSWR from 'swr'
 import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
 import { getMaxListeners } from 'process';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-
+import AddIcon from '@mui/icons-material/Add';
+import Button from '@mui/material/Button';
+import estilos from '../infoAdmins/info.module.css'
 
 
 const columns: GridColDef[] = [
@@ -11,6 +13,7 @@ const columns: GridColDef[] = [
   { field: 'firstName', headerName: 'Nombre', width: 130 },
   { field: 'lastName', headerName: 'Apellido', width: 130 },
   { field: 'mail', headerName: 'Mail', width: 180 },
+    
   {
     field: 'perm',
     headerName: 'Permisos',
@@ -23,6 +26,7 @@ const columns: GridColDef[] = [
     type: 'number',
     width: 110,
   },
+
   {
     field: 'fullName',
     headerName: 'Nombre Completo',
@@ -50,20 +54,25 @@ const rows = [
   { id: 13, lastName: '', firstName: '', age:, dni: , mail: ''  },
   { id: 14, lastName: '', firstName: '', age:, dni: , mail: ''  },
   { id: 15, lastName: '', firstName: '', age:, dni: , mail: ''  },*/
+  
 ];
-
 export default function DataTable() {
   return (
-    <div style={{ height: 500 }}>
+    <React.Fragment>
+      <div style={{ height: 500 }}>
       <DataGrid
         rows={rows}
         columns={columns}
         pageSize={15}
         rowsPerPageOptions={[15]}
         checkboxSelection
-        
       />
     </div>
+
+    <Button className={estilos.botonAdd} color="secondary" aria-label="add">
+            <AddIcon />
+          </Button>
+    </React.Fragment>
     
   );
 }
