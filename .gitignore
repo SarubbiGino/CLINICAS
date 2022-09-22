@@ -42,4 +42,5 @@ next-env.d.ts
 
 #client
 **/client-development/*
-/.next
+/.next.next/static/chunks/_error.js
+.next/server/pages/formDonar/form.js

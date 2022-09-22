@@ -1,4 +1,8 @@
 .contenedorForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
   font-size: 18px;
   font-family: "Noto Sans" sans-serif;
   font-weight: 500;
@@ -8,6 +12,9 @@
   margin-top: 15px;
   margin-left: 5px;
 }
+.contenedorNS {
+  text-align: left;
+}
 .requisitos {
   font-size: 18px;
   font-family: "Noto Sans" sans-serif;
@@ -15,11 +22,16 @@
   margin-top: 15px;
 }
 .boton {
-  display: flex;
   justify-content: center;
+  font-family: "Noto Sans" sans-serif;
   margin-left: 160px;
   margin-top: 20px;
   margin-bottom: 20px;
+  background-color: #2d13a3;
+}
+
+.boton:hover {
+  background-color: rgb(72 50 175);
 }
 .textoerror {
   font-size: 18px;
@@ -27,7 +39,10 @@
   margin-top: 10px;
 }
 .titulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
   font-size: 25px;
   font-family: "Noto Sans" sans-serif;
-  text-decoration: underline blue;
 }

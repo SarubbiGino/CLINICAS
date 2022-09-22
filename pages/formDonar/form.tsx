@@ -14,13 +14,26 @@ export default function AddressForm() {
     <React.Fragment>
       <p className={estilos.titulo}>Requisitos para Donar</p>
       
-          <Grid className={estilos.requisitos}>
-              <p>Tener entre 16 y 65 años</p>
-           </Grid>   
-
-        <Grid className={estilos.requisitos}>
-        <p>Pesar mas de 50 kilos</p>
+      <Grid className={estilos.contenedorForm}>
+           <p>¿Tenes entre 16 y 65 años?</p>
+               
+        <FormControlLabel
+            control={<Checkbox color="secondary" name="saveAddress" value="yes" />}
+            label="Si"
+          />
+          <Modal/>
           </Grid>
+          
+          <Grid className={estilos.contenedorForm}>
+           <p>¿Pesas mas de 50 kilos?</p>
+               
+        <FormControlLabel
+            control={<Checkbox color="secondary" name="saveAddress" value="yes" />}
+            label="Si"
+          />
+          <Modal/>
+          </Grid>  
+
           <Grid className={estilos.contenedorForm}>
            <p>En los últimos 6 meses, ¿te hiciste algún tatuaje, alguna
                endoscopía o cirugía?</p>

@@ -25,7 +25,7 @@ export default function BasicModal() {
   const handleClose = () => setOpen(false);
 
   return (
-    <div>
+    <div className={estilos.contenedorNS}>
       <FormControlLabel onClick={handleOpen}
             control={<Checkbox color="secondary" name="saveAddress" value="yes" />}
             label="No"
