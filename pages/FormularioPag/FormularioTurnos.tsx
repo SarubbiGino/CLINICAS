@@ -24,6 +24,25 @@ function RedBar() {
 }
 
 export default function LayoutTextFields() {
+    const[turnoSeleccionado,setTurnoSeleccionado] = React.useState(false)
+    const[indexTurnoSeleccionado, setIndexTurnoSeleccionado] = React.useState (-1)
+const turnos=[
+    "23/05/2023 a las 15:30hs" ,
+    "23/05/2023 a las 12:45hs",
+    "23/05/2023 a las 18:30hs"  
+];
+
+
+const createHandleChangeTurno=(indexTurno:number) =>{
+    console.log("se creo un handle con " + indexTurno)
+    console.log("turno seleccionado actualmente "+ indexTurnoSeleccionado)
+    return(()=>{
+        console.log("se ejecuto el handle con "+ indexTurno);
+        setTurnoSeleccionado(true)
+        setIndexTurnoSeleccionado( turnoSeleccionado ?indexTurno: 0)
+    })
+}
+
   return (
     <Box className={styles.contenedor}
       sx={{
@@ -49,9 +68,9 @@ export default function LayoutTextFields() {
       <div>
 
       <FormGroup className={styles.contenedorCheck}>
-      <FormControlLabel control={<Checkbox defaultChecked />} label="23/05/2023 a las 15:30hs" />
-      <FormControlLabel control={<Checkbox />} label="17/12/2022 a las 15:35hs" />
-      <FormControlLabel  control={<Checkbox />} label="08/11/2022 a las 12:00hs" />
+          {
+             turnos.map((turno,index) => (<FormControlLabel checked={turnoSeleccionado ?index=== indexTurnoSeleccionado: false}onChange={createHandleChangeTurno(index)} key = {index} control={<Checkbox defaultChecked />} label={turno} />))
+          }
     </FormGroup>
       </div>
 
