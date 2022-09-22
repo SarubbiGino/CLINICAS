@@ -1,0 +1,24 @@
+.botonAdd {
+  font-size: 9px;
+  margin-top: -75px;
+  flex-direction: column;
+
+  margin-left: 23px;
+}
+.boton2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  margin-top: 20px;
+}
+.admin {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+.tituloAdmin {
+  text-align: center;
+}

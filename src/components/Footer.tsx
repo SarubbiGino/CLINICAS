@@ -34,8 +34,7 @@ export default function Footer() {
                 <Box className={estilos.contenedorRedes} >
                    <FacebookIcon className={estilos.logos}/>
                    <TwitterIcon className={estilos.logos}/>
-                   
-                   
+                   <LinkedInIcon className={estilos.logos}/>
                    <WhatsappIcon className={estilos.logos}/> 
                 </Box>
             </Grid>
