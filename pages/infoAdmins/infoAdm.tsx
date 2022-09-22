@@ -9,10 +9,10 @@ import estilos from '../infoAdmins/info.module.css'
 
 
 const columns: GridColDef[] = [
-  { field: 'id', headerName: 'ID', width: 70 },
-  { field: 'firstName', headerName: 'Nombre', width: 130 },
-  { field: 'lastName', headerName: 'Apellido', width: 130 },
-  { field: 'mail', headerName: 'Mail', width: 180 },
+  { field: 'id', headerName: 'ID', width: 20 },
+  { field: 'firstName', headerName: 'Nombre', width: 110 },
+  { field: 'lastName', headerName: 'Apellido', width: 120 },
+  { field: 'mail', headerName: 'Mail', width: 190 },
     
   {
     field: 'perm',
@@ -59,6 +59,7 @@ const rows = [
 export default function DataTable() {
   return (
     <React.Fragment>
+      <p>Lista de administradores</p>
       <div style={{ height: 500 }}>
       <DataGrid
         rows={rows}
