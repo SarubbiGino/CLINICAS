@@ -2,10 +2,10 @@ import * as React from 'react';
 import useSWR from 'swr'
 import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
 import { getMaxListeners } from 'process';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import Button from '@mui/material/Button';
 import estilos from '../infoAdmins/info.module.css'
 import AddIcon from '../infoAdmins/modalAdd'
+import { ClassNames } from '@emotion/react';
 
 
 const columns: GridColDef[] = [
@@ -25,7 +25,7 @@ const columns: GridColDef[] = [
   },
 ];
 
-const rows = [
+const rows = [ 
   { id: 1, lastName: 'Fiorentino', firstName: 'Nazareno', mail: 'nazarenuski@gmailcom' },
   { id: 2, lastName: 'Gomez', firstName: 'German',  mail: 'germangomez@gmail.com'  },
   { id: 3, lastName: 'Rodriguez', firstName: 'Vera', mail: 'verarodr@gmail.com' },
@@ -53,11 +53,10 @@ export default function DataTable() {
         columns={columns}
         pageSize={15}
         rowsPerPageOptions={[15]}
-        checkboxSelection
       />
+      
     </div>
     <AddIcon/>
-
     </React.Fragment>
     
   );
