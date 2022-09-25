@@ -4,7 +4,6 @@ import TextField from '@mui/material/TextField';
 import estilos from '../infoAdmins/info.module.css'
 import Button from '@mui/material/Button';
 
-
 const FormElement = React.FormEvent<HTMLFormElement>;
 interface ITask{
     name: string;
@@ -12,19 +11,6 @@ interface ITask{
     em: string;
     done: boolean;
 }
-
-const style = {
-  position: 'absolute' as 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
-  boxShadow: 24,
-  p: 4,
-};
-
 
 function App(): JSX.Element{
     const [newTask, setNewTask] = useState<string>(''); 
@@ -66,11 +52,11 @@ return(
           </Typography>
             <TextField onChange={e => setNewTask(e.target.value)} value={newTask}className={estilos.admin} type='text' label='Nombre' name='name' variant="outlined" />
             <TextField onChange={e => setNewTaskap(e.target.value)} value={newTaskap}className={estilos.admin} type='text' name='ap' label="Apellido"variant="outlined" />
-            <TextField onChange={e => setNewTaskem(e.target.value)} value={newTaskem}className={estilos.admin} type='email' name='em' label="Email" variant="outlined" />
+            <TextField onChange={e => setNewTaskem(e.target.value)} value={newTaskem}className={estilos.admin} type='email' name='em' label="Mail" variant="outlined" />
                          
                       <div className={estilos.boton2}> 
                         <button>
-            Enviar</button>
+            Añadir</button>
            </div>
             </form>
             {
