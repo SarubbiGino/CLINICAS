@@ -1,0 +1,19 @@
+.modal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: rgb(65, 37, 192);
+}
+.contenedorlogos{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    
+}
