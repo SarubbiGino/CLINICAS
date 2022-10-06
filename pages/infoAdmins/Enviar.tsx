@@ -3,31 +3,46 @@ import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import estilos from '../infoAdmins/info.module.css'
 import Button from '@mui/material/Button';
+import { addAdmin, editAdmin } from "../../src/features/admin/adminSlice";
+import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
+import type {RootState, AppDispatch} from '../../src/app/store'
+import { v4 as uuid } from "uuid";
+
+export const useAppDispatch: () => AppDispatch = useDispatch
 
 const FormElement = React.FormEvent<HTMLFormElement>;
 interface ITask{
     name: string;
-    ap: string;
-    em: string;
+    apellido: string;
+    email: string;
     done: boolean;
 }
 
 function App(): JSX.Element{
     const [newTask, setNewTask] = useState<string>(''); 
     const [tasks, setTasks] = useState([])
-    const [newTaskap, setNewTaskap] = useState<string>(''); 
-    const [tasksap, setTasksap] = useState([])
-    const [newTaskem, setNewTaskem] = useState<string>(''); 
-    const [tasksem, setTasksem] = useState([])
+    const [newTaskapellido, setNewTaskapellido] = useState<string>(''); 
+    const [tasksapellido, setTasksapellido] = useState([])
+    const [newTaskemail, setNewTaskemail] = useState<string>(''); 
+    const [tasksemail, setTasksemail] = useState([])
+    
+      const dispatch = useAppDispatch();
+
     
     const handleSubmit = (e: FormElement) => {
         e.preventDefault();
+        dispatch(
+        addAdmin({
+          ...admin,
+          id: uuid(),
+        })
+      );
         addTask(newTask);
         setNewTask('');
-        addTaskap(newTaskap);
-        setNewTaskap('');
-        addTaskem(newTaskem);
-        setNewTaskem('');
+        addTaskapellido(newTaskapellido);
+        setNewTaskapellido('');
+        addTaskemail(newTaskemail);
+        setNewTaskemail('');
         
     }
     
@@ -35,13 +50,13 @@ function App(): JSX.Element{
         const newTasks: ITask[] = [...tasks, {name}]
         setTasks(newTasks)
     }
-    const addTaskap = ( ap: string) =>{
-        const newTasksap: ITask[] = [...tasksap, {ap}]
-        setTasksap(newTasksap)
+    const addTaskapellido = ( apellido: string) =>{
+        const newTasksapellido: ITask[] = [...tasksapellido, {apellido}]
+        setTasksapellido(newTasksapellido)
     }
-    const addTaskem = ( em: string) =>{
-        const newTasksem: ITask[] = [...tasksem, {em}]
-        setTasksem(newTasksem)
+    const addTaskemail = ( email: string) =>{
+        const newTasksemail: ITask[] = [...tasksemail, {email}]
+        setTasksemail(newTasksemail)
     }
     
 return(
@@ -51,8 +66,8 @@ return(
             Informacion de administradores
           </Typography>
             <TextField onChange={e => setNewTask(e.target.value)} value={newTask}className={estilos.admin} type='text' label='Nombre' name='name' variant="outlined" />
-            <TextField onChange={e => setNewTaskap(e.target.value)} value={newTaskap}className={estilos.admin} type='text' name='ap' label="Apellido"variant="outlined" />
-            <TextField onChange={e => setNewTaskem(e.target.value)} value={newTaskem}className={estilos.admin} type='email' name='em' label="Mail" variant="outlined" />
+            <TextField onChange={e => setNewTaskapellido(e.target.value)} value={newTaskapellido}className={estilos.admin} type='text' name='ap' label="Apellido"variant="outlined" />
+            <TextField onChange={e => setNewTaskemail(e.target.value)} value={newTaskemail}className={estilos.admin} type='email' name='em' label="Mail" variant="outlined" />
                          
                       <div className={estilos.boton2}> 
                         <button>
@@ -65,13 +80,13 @@ return(
                 })
             }
             {
-                tasksap.map((t: ITask, i: number) => {
-                    return <h1 key={i}>{t.ap}</h1>
+                tasksapellido.map((t: ITask, i: number) => {
+                    return <h1 key={i}>{t.apellido}</h1>
                 })
             }
                        {
-                tasksem.map((t: ITask, i: number) => {
-                    return <h1 key={i}>{t.em}</h1>
+                tasksemail.map((t: ITask, i: number) => {
+                    return <h1 key={i}>{t.email}</h1>
                 })
             }
         </Fragment>
