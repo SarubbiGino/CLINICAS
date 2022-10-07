@@ -47,7 +47,7 @@ function adminForm() {
 
   return (
     <form onSubmit={handleSubmit} className="bg-zinc-800 max-w-sm p-4">
-      <label className="block text-sm font-bold">Admin:</label>
+      <label className="block text-sm font-bold">Nombre:</label>
       <input
         type="text"
         name="first_name"

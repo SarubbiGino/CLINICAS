@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import useSWR from 'swr'
 import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
 import { getMaxListeners } from 'process';
 import Button from '@mui/material/Button';
