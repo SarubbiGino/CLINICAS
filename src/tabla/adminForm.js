@@ -6,8 +6,9 @@ import { v4 as uuid } from "uuid";
 
 function adminForm() {
   const [admin, setAdmin] = useState({
-    title: "",
-    description: ""
+    first_name: "",
+    last_name: "",
+    email:""
   });
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -49,20 +50,19 @@ function adminForm() {
       <label className="block text-sm font-bold">Admin:</label>
       <input
         type="text"
-        name="title"
+        name="first_name"
         onChange={handleChange}
-        value={admin.title}
+        value={admin.first_name}
         className="w-full p-2 rounded-md bg-zinc-600 mb-2"
         placeholder="Write a title"
         autoFocus
       />
       <label>
-        Description:
-        <textarea
+        Apellido:<textarea
           type="text"
-          name="description"
+          name="last_name"
           onChange={handleChange}
-          value={admin.description}
+          value={admin.last_name}
           className="w-full p-2 rounded-md bg-zinc-600 mb-2"
           placeholder="Write a description"
         />

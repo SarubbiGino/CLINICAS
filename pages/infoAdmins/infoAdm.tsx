@@ -6,7 +6,6 @@ import Button from '@mui/material/Button';
 import estilos from '../infoAdmins/info.module.css'
 import AddIcon from '../infoAdmins/modalAdd'
 import { ClassNames } from '@emotion/react';
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import type { RootState, AppDispatch } from '../../src/app/store'
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
 export const useAppDispatch: () => AppDispatch = useDispatch
@@ -27,29 +26,10 @@ const columns: GridColDef[] = [
     valueGetter: (params: GridValueGetterParams) =>
       `${params.row.first_name || ''} ${params.row.last_name || ''}`,
   },
-];
+]; 
 
-const rows = [ 
-  { id: 1, lastName: 'Fiorentino', firstName: 'Nazareno', mail: 'nazarenuski@gmailcom' },
-  { id: 2, lastName: 'Gomez', firstName: 'German',  mail: 'germangomez@gmail.com'  },
-  { id: 3, lastName: 'Rodriguez', firstName: 'Vera', mail: 'verarodr@gmail.com' },
-  { id: 4, lastName: 'Collado', firstName: 'Carmen',mail: 'carmencollado@gmail.com'  },
-  { id: 5, lastName: 'Chavez', firstName: 'Eulogio',  mail: 'eulochvz@gmail.com'  },
-  { id: 6, lastName: 'Grau', firstName: 'Evangelina', mail: 'evagrau@gmail.com'  },
-  { id: 7, lastName: 'Camacho', firstName: 'Manuel',mail: 'manucam@gmail.com'  },
-  { id: 8, lastName: 'Pedraza', firstName: 'Monica',  mail: 'monipdrz@gmail.com'  },
-  { id: 9, lastName: 'Miranda', firstName: 'Mariano',  mail: 'marianmrnd@gmail.com'  },
-  { id: 10, lastName: 'Piñero', firstName: 'Maria', mail: 'mariapñro@gmail.com'  },
-  /*{ id: 11, lastName: 'Valdes', firstName: 'Luis', age: 65, dni: 30254678, mail: 'luisvlades@gmail.com'  },
-  { id: 12, lastName: '', firstName: '', age:, dni: , mail: ''  },
-  { id: 13, lastName: '', firstName: '', age:, dni: , mail: ''  },
-  { id: 14, lastName: '', firstName: '', age:, dni: , mail: ''  },
-  { id: 15, lastName: '', firstName: '', age:, dni: , mail: ''  },*/
-  
-];
 export default function DataTable() {
     const admins = useAppSelector ((state) => state.admins)
-
   return (
     <React.Fragment>
       <p>Lista de administradores</p>

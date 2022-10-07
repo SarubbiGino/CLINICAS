@@ -6,6 +6,8 @@ import Button from '@mui/material/Button';
 import type { RootState, AppDispatch } from '../../src/app/store'
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
 export const useAppDispatch: () => AppDispatch = useDispatch
+import { addAdmin, editAdmin } from "../../src/features/admin/adminSlice";
+import { v4 as uuid } from "uuid";
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector
 
 const FormElement = React.FormEvent<HTMLFormElement>;
@@ -23,12 +25,26 @@ function App(): JSX.Element{
     const [tasksap, setTasksap] = useState([])
     const [newTaskem, setNewTaskem] = useState<string>(''); 
     const [tasksem, setTasksem] = useState([])
-      const admins = useAppSelector((state) => state.admins);
-  const dispatch = useAppDispatch(); 
-    
-    
+    //const admins = useAppSelector((state) => state.admins);
+    const dispatch = useAppDispatch(); 
+    const useSelector = useAppSelector();
+    const navigate = useNavigate();
+    const params = useParams();
+        
     const handleSubmit = (e: FormElement) => {
         e.preventDefault();
+        if (params.id) {
+      dispatch(editAdmin({ ...admin, id: params.id }));
+    } else {
+      dispatch(
+        addAdmin({
+          ...admin,
+          id: uuid()
+        })
+      );
+    }
+        navigate("/");
+        
         addTask(newTask);
         setNewTask('');
         addTaskap(newTaskap);
