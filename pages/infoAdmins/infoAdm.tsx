@@ -6,6 +6,8 @@ import Button from '@mui/material/Button';
 import estilos from '../infoAdmins/info.module.css'
 import AddIcon from '../infoAdmins/modalAdd'
 import { ClassNames } from '@emotion/react';
+import { deleteAdmin } from "../../src/features/admin/adminSlice";
+
 import type { RootState, AppDispatch } from '../../src/app/store'
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
 export const useAppDispatch: () => AppDispatch = useDispatch
@@ -29,7 +31,11 @@ const columns: GridColDef[] = [
 ]; 
 
 export default function DataTable() {
+  const handleDelete = (id) => {
+    dispatch(deleteAdmin(id));
+  };
     const admins = useAppSelector ((state) => state.admins)
+
   return (
     <React.Fragment>
       <p>Lista de administradores</p>
@@ -41,6 +47,10 @@ export default function DataTable() {
         rowsPerPageOptions={[15]}
       />
     </div>
+     <button
+     onClick={() => handleDelete(admin.id)}>
+     delete
+     </button>
     <AddIcon/>
     </React.Fragment>
     

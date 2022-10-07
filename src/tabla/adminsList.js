@@ -1,10 +1,10 @@
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-//import { deleteadmin } from "../features/admin/adminSlice";
+import { deleteadmin } from "../features/admin/adminSlice";
 
 function adminsList() {
-  const admins = useSelector((state) => state.admins);
   const dispatch = useDispatch();
+  const admins = useSelector((state) => state.admins);
 
   const handleDelete = (id) => {
     dispatch(deleteadmin(id));
@@ -27,7 +27,7 @@ function adminsList() {
         {admins.map((admin) => (
           <div className="bg-neutral-800 p-4 rounded-md" key={admin.id}>
             <header className="flex justify-between">
-              <h3 className="text-lg font-bold">{admin.title}</h3>
+              <h3 className="text-lg font-bold">{admin.first_name}</h3>
               <div className="flex gap-x-2">
                 <Link
                   to={`/edit-admin/${admin.id}`}
@@ -43,7 +43,7 @@ function adminsList() {
                 </button>
               </div>
             </header>
-            <p>{admin.description}</p>
+            <p>{admin.last_name}</p>
             <p className="text-xs text-slate-400">{admin.id}</p>
           </div>
         ))}

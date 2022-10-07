@@ -1,19 +1,16 @@
-import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 // Components
-import adminsList from "../pages/infoAdmins/adminsList";
-import adminForm from "../pages/infoAdmins/adminForm";
+import adminForm from "../src/tabla/adminForm";
 
-function App() {
+function tabla() {
   return (
     <div className="bg-zinc-900 h-screen text-white">
       <div className="flex items-center justify-center h-full">
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<TasksList />} />
-            <Route path="/create-task" element={<TaskForm />} />
-            <Route path="/edit-task/:id" element={<TaskForm />} />
+            <Route path="/create-admin" element={<adminForm />} />
+            <Route path="/edit-admin/:id" element={<adminForm />} />
           </Routes>
         </BrowserRouter>
       </div>
@@ -21,4 +18,4 @@ function App() {
   );
 }
 
-export default App;
+export default tabla;

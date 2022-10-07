@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
-import { addAdmin, editAdmin } from "../features/admin/adminsSlice";
+import { addAdmin, editAdmin } from "../../src/features/admin/adminSlice";
 import { v4 as uuid } from "uuid";
 
 function adminForm() {
