@@ -8,15 +8,13 @@ import imagen1 from "../img/donadores.jpg";
 import { Box } from "@mui/material";
 import Footer from "../src/components/Footer";
 import { Container } from "@mui/system";
-
+import { Provider } from "react-redux";
+import { store } from "../src/app/store";
 import React from 'react'
-
-
-
-
 
 const Home = () => {
   return (
+    <Provider store={store}>
     <Container>
       <main className={styles.main}>
         <TituloMain />
@@ -26,6 +24,7 @@ const Home = () => {
       </main>
    
     </Container>
+    </Provider>
   );
 };
 
