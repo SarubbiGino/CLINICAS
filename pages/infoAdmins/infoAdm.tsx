@@ -33,6 +33,7 @@ export default function DataTable() {
   const handleDelete = (id) => {
     dispatch(deleteAdmin(id));
   };
+  
     const admins = useAppSelector ((state) => state.admins)
 
   return (
