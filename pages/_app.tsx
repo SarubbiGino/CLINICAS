@@ -3,9 +3,8 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Layout from "../src/layout/layout";
 import Head from "next/head";
-
 import { Provider } from "react-redux";
-import { store } from "../src/app/store";
+import { store } from "../src/store/store";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
