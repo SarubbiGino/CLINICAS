@@ -6,7 +6,7 @@ import { StatusStateAdmins } from "../interfaces/index";
 export type AdminsState = {
   values: Admin[];
   selected: number[];
-  status: string;
+  status: StatusStateAdmins;
 };
 
 const initialValues: Admin[] = [
@@ -35,7 +35,7 @@ const initialValues: Admin[] = [
 const initialState: AdminsState = {
   values: initialValues,
   selected: [],
-  status: "loading", //can be "loading", "online", "error"
+  status: StatusStateAdmins.loading, //can be "loading", "online", "error"
 };
 
 const adminsSlice = createSlice({

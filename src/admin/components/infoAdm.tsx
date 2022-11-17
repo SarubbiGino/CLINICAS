@@ -8,9 +8,14 @@ import {
 } from "@mui/x-data-grid";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { selectAdmins } from "../slice/adminSlice";
+import { Alert, LinearProgress } from "@mui/material";
+import { StatusStateAdmins } from "../interfaces/index";
+import { Box } from "@mui/system";
+
 
 export default function DataTable() {
   const dispatch = useAppDispatch();
+
   const handleEditRow = (params: GridCellEditCommitParams) => {
     console.log(params);
   };
@@ -31,6 +36,7 @@ export default function DataTable() {
   ];
 
   const entities = useAppSelector((state) => state.admins.values);
+  const status = useAppSelector((state) => state.admins.status);
 
   const handleSelectRow = (selection: GridSelectionModel) => {
     dispatch(selectAdmins(selection as string[]));
@@ -41,6 +47,8 @@ export default function DataTable() {
       <p>Lista de administradores</p>
 
       <div style={{ height: 500 }}>
+      {status === StatusStateAdmins.loading && <CustomLinearProgress />}
+      {status === StatusStateAdmins.error && <CustomAlert />}
         <DataGrid
           rows={entities}
           columns={columns}
@@ -53,3 +61,12 @@ export default function DataTable() {
     </React.Fragment>
   );
 }
+  const CustomLinearProgress = () => (
+    <Box sx={{ color: "var(--color-primario)" }}>
+      <LinearProgress color="inherit" />
+    </Box>
+  );
+  
+  const CustomAlert = () => (
+    <Alert severity="error">Ups, algo no fue del todo bien!!!</Alert>
+  );

@@ -11,6 +11,7 @@ import estilos from "./info.module.css";
 import { v4 as uuidv4 } from "uuid";
 import { addAdmin } from "../slice/adminSlice";
 import { useAppDispatch } from "../../store/hooks";
+import { add } from "../thunks/index";
 
 function FormAddAdmin({ close }: { close: () => void }): JSX.Element {
   const dispatch = useAppDispatch();
@@ -31,7 +32,7 @@ function FormAddAdmin({ close }: { close: () => void }): JSX.Element {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     dispatch(
-      addAdmin({
+      add({
         ...admin,
         id: uuidv4(),
       })
